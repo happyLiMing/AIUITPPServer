@@ -213,6 +213,7 @@ public class AIUITppServlet extends HttpServlet {
 ```
 
 ##反思总结
+
 集成AIUI示例的过程中遇到一个比较头疼的问题就是后处理服务是java开发的，而jdk默认是不支持AEC/CBC/PKSC7padding加解密方式，在解密AIUI服务POST过来的数据时反复解密验证始终包。这里有两个需要注意的问题点是使用java在进行加解密时需要添加BouncyCastleProvider,需要导入jar包bcprov-jdkXXX.jar
 关键代码如下：
 
